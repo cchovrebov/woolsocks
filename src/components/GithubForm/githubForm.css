@@ -1,0 +1,10 @@
+.github-form {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.github-form .github-form-accessToken {
+  margin: 1rem 1rem 0 0;
+}

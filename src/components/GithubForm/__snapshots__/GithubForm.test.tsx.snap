@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GithubForm /> test should match the snapshot 1`] = `
+<DocumentFragment>
+  <form
+    autocomplete="off"
+    class="github-form MuiBox-root css-0"
+    data-testid="github-form"
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+    >
+      <label
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="false"
+        for="component-error"
+      >
+        Access token
+      </label>
+      <div
+        class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl github-form-accessToken css-1480iag-MuiInputBase-root-MuiInput-root"
+        data-testid="github-form-accessToken"
+      >
+        <input
+          aria-describedby="component-error-text"
+          aria-invalid="false"
+          class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      data-testid="github-form-button"
+      tabindex="0"
+      type="button"
+    >
+      Fetch organizations
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </form>
+</DocumentFragment>
+`;

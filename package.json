@@ -3,29 +3,140 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.2.1",
+    "@mui/material": "^5.2.3",
+    "@mui/styled-engine-sc": "^5.1.0",
+    "@reduxjs/toolkit": "^1.7.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "ag-grid-community": "^26.2.0",
+    "ag-grid-enterprise": "^26.2.0",
+    "ag-grid-react": "^26.2.0",
+    "autoprefixer": "^10.4.0",
+    "axios": "^0.21.1",
+    "enzyme": "^3.11.0",
+    "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "yarn eslint src"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.6.2",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jest-fetch-mock": "^3.0.3",
+    "postcss": "^7.0.35",
+    "postcss-nesting": "6",
+    "prettier": "^2.2.1"
+  },
+  "jest": {
+    "resetMocks": false,
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^react-scroll-to-component$": "identity-obj-proxy"
+    }
   },
   "eslintConfig": {
+    "root": true,
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "simple-import-sort"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "simple-import-sort/imports": [
+        "warn",
+        {
+          "groups": [
+            [
+              "^react",
+              "^@?\\w"
+            ],
+            [
+              "^common",
+              "^auth",
+              "^features"
+            ],
+            [
+              "^\\u0000"
+            ],
+            [
+              "^\\.\\.(?!/?$)",
+              "^\\.\\./?$"
+            ],
+            [
+              "^\\./(?=.*/)(?!/?$)",
+              "^\\.(?!/?$)",
+              "^\\./?$"
+            ],
+            [
+              "^.+\\.s?css$"
+            ]
+          ]
+        }
+      ],
+      "no-console": 1,
+      "require-atomic-updates": 1,
+      "linebreak-style": [
+        0,
+        "unix"
+      ],
+      "prefer-template": 1,
+      "react/jsx-key": [
+        2,
+        {
+          "checkFragmentShorthand": true
+        }
+      ],
+      "prefer-object-spread": 1,
+      "curly": "warn",
+      "max-lines": [
+        1,
+        {
+          "skipBlankLines": true
+        }
+      ]
+    }
+  },
+  "lint-staged": {
+    "{src,cypress}/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
     ]
   },
   "browserslist": {
