@@ -95,7 +95,7 @@ const GithubForm = ({
         variant="contained"
         data-testid="github-form-button"
       >
-        Fetch organizations
+        Fetch
       </Button>
     </Box>
   )
